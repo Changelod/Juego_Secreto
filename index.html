@@ -1,40 +1,54 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>JS Game</title>
+    <link rel="stylesheet" href="/reset.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Encriptador Challenge</title>
 </head>
-
 <body>
-
-    <div class="container">
-        <div class="container__contenido">
-            <div class="container__informaciones">
-                <div class="container__texto">
-                    <h1></h1>
-                    <p class="texto__parrafo"></p>
-                </div>
-                <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
-                <div class="chute container__botones">
-                    <button onclick="verificarIntento();" class="container__boton">Intentar</button>
-                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>
-                </div>
-            </div>
-            <img src="./img/ia.png" alt="Una persona mirando a la izquierda" class="container__imagen-persona" />
+    <header>
+        <div class="header">
+            <img class="logo" src="./imagenes/vector.png" alt="logo">
         </div>
-    </div>
+        
+    </header>
 
+    <main>
+<div class="main">
+    <section class="sectionLeft">
+        <div class="containerTexBox">
+         <textarea id="textBox" placeholder="Ingrese el texto aqui" class="textBox"></textarea>
+        </div>
+        <div class="alertButton">
+             <img src="/imagenes/alert.png" alt="alerta">
+             <span class="infoLeft">Solo letras minusculas y sin acentos</span>
+            <div class="buttons">
+                <input type="button" id="btnEncrypt" class="btn-encrypt" value="Encriptar">
+                <input type="button" id="btnDecrypt" class="btn-decrypt" value="Desencriptar">
+            </div>
+         </div>
+         
+     </section>
+     <div id="sectionRight" class="sectionRight configRight">
+         <div id="muneco" class="containerMuneco">
+             <img class="muneco" src="/imagenes/muneco.png" alt="muneco">
+         </div>
+         <div class="containerText">
+             <textarea id="mensage" placeholder="Ningún mensaje fue encontrado"></textarea>
+             <p id="emptyText" >Ingresa el texto que desees encriptar o <br> desencriptar.</p>
+         </div>
+         <div class="containerCopy">
+             <input type="button" id="btnCopy" class="btn-copy btnHide" value="Copiar">
+         </div>
+         <div class="containerResult">
+             <p class="textResult"></p>
+         </div>
+</div>
+        </div>
+    </main>
 
-
-
-    <script src="app.js" defer></script>
+    <script src="encriptador.js"> </script>
 </body>
-
 </html>
